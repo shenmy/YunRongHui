@@ -12,10 +12,20 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var isPresentingLoginVC: Bool?
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        self.window?.rootViewController = YRHTBC()
+        self.window?.makeKeyAndVisible()
+        
+        self.checkLogin()
+        
+        
+        
         return true
     }
 
@@ -40,6 +50,37 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
+
+
+}
+
+extension AppDelegate {
+    
+    func checkLogin() {
+        
+        
+    
+    
+    
+    }
+    
+    //show loginVC
+    func showLoginVC() -> Bool{
+        if isPresentingLoginVC! {
+            return true
+        }
+        isPresentingLoginVC = true;
+        
+        
+        
+        
+        
+        return true
+    
+    
+    }
+
+
 
 
 }
